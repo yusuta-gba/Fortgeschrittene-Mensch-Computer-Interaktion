@@ -64,6 +64,9 @@ void MainWindow::on_pushButton_13_clicked()
      *   Eingabelänge abfragen.
      *
      */
+    if(this->clickedStart)
+    {
+
     this->backupCounter();
     for(int i = 1; i<=this->secondCounter; i++)
     {
@@ -142,7 +145,12 @@ void MainWindow::on_pushButton_13_clicked()
         else
             ui->label_6->setText(QString::fromStdString("PASSWORD IS NOT VALID"));
     }
-
+        }
+    else
+    {
+        return;
+    }
+    this->clickedStart = false;
     return;
 }
 
@@ -178,7 +186,7 @@ void MainWindow::on_pushButton_10_clicked()
     this->startTime = chrono::duration_cast<chrono::milliseconds>(
               duration)
               .count();
-
+    this->clickedStart = true;
 
    // ui->label->setText(QString::number(this->startTime));
 }
@@ -304,17 +312,6 @@ void MainWindow::on_listWidget_itemPressed(QListWidgetItem *item)
 
 void MainWindow::on_pushButton_11_clicked()
 {
-
-    if( "z" == ui->pushButton_12->text())
-    {
-        ui->pushButton_12->setText("Z");
-
-    }
-    else if ("Z" == ui->pushButton_12->text() )
-    {
-        ui->pushButton_12->setText("z");
-
-    }
 
 
 
@@ -598,21 +595,7 @@ void MainWindow::on_pushButton_11_clicked()
 }
 
 
-void MainWindow::on_pushButton_12_clicked()
-{
 
-
-    if( "z" == ui->pushButton_12->text())
-    {
-        this->generateCode('z');
-
-    }
-    else if ("Z" == ui->pushButton_12->text() )
-    {
-        this->generateCode('Z');
-    }
-
-}
                                                     /**************
                                                      * TASTE 1
                                                      */
@@ -858,6 +841,16 @@ void MainWindow::on_pushButton_16_clicked()
 
 void MainWindow::on_pushButton_17_clicked()
 {
+    this->clickedStart = true;
+    if(this->generateStatic == true)
+    {
+        ui->listWidget->addItem(QString::fromStdString(this->Password[0]));
+        ui->listWidget->addItem(QString::fromStdString(this->Password[1]));
+        ui->listWidget->addItem(QString::fromStdString(this->Password[2]));
+        ui->listWidget->addItem(QString::fromStdString(this->Password[3]));
+        this->generateStatic = false;
+    }
+
     QCryptographicHash * MD5 = new QCryptographicHash(QCryptographicHash::Md5);
     QRandomGenerator64 * PRNG = new QRandomGenerator64(this->seed);
     QByteArray * data = new QByteArray();

@@ -78,8 +78,6 @@ private slots:
 
     void on_pushButton_11_clicked();
 
-    void on_pushButton_12_clicked();
-
     void on_pushButton_17_clicked();
 
 
@@ -102,8 +100,8 @@ private:
     int secondCounter;
     bool lowerCase = false;
     int seed = 1;
-
-
+    bool clickedStart = false;
+    bool generateStatic = true;
 
 };
 #endif // MAINWINDOW_H
