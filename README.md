@@ -7,7 +7,7 @@
      </embed>
 </object>
 <p>  Für folgende statische Passwörter kann mit diesem Programm die Recognitonrate sowie auch die Fehlerrate ermessen werden:</p>
-            <p> z00Z2z3:  9-0-0-[Umschalttaste]-0-2-[Umschalttaste]-9-3</p>
+            <p> z00Z2z3:  9-0-0-[Umschalttaste]-9-2-[Umschalttaste]-9-3</p>
             <p> Z3z00z4Z  [Umschalttaste]-9-3-[Umschalttaste]-9-0-0-9-4-[Umschalttaste]-9</p>
             <p> 0z4Z20zZ2 0-9-4-[Umschalttaste]-9-2-0-[Umschalttaste]-9-[Umschalttaste]-9-2</p>
        <p> Weiterhin kann mit dem Generate-Tastenobjekt dynamische Passwörter erstellt werden, wofür die Md5 Hashfunktion benutzt werden kann.</p>
