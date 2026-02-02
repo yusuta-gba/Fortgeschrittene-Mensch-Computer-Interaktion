@@ -5,7 +5,7 @@
             <p> z00Z2z3:  9-0-0-[Umschalttaste]-0-2-[Umschalttaste]-9-3</p>
             <p> Z3z00z4Z  [Umschalttaste]-9-3-[Umschalttaste]-9-0-0-9-4-[Umschalttaste]-9</p>
             <p> 0z4Z20zZ2 0-9-4-[Umschalttaste]-9-2-0-[Umschalttaste]-9-[Umschalttaste]-9-2</p>
-       <p> Weiterhin kann mit dem Generate-Tastenobjekt dynamische Passwärter erstellt werden, wofür die Md5 Hashfunktion benutzt werden kann.</p>
+       <p> Weiterhin kann mit dem Generate-Tastenobjekt dynamische Passwörter erstellt werden, wofür die Md5 Hashfunktion benutzt werden kann.</p>
         </embed>
 </object>
 <li> Header-Datei bzw. die Klasse: <a href=https://github.com/yusuta-gba/Fortgeschrittene-Mensch-Computer-Interaktion/blob/main/mainwindow.h>mainwindow.h</a>   </li>
