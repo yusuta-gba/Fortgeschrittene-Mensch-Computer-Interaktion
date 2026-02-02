@@ -120,7 +120,7 @@ void MainWindow::on_pushButton_13_clicked()
     for(int i = 0; i<n1; i++)
     {
 
-        if(this->stringNumbersBackUp.at(i) == this->Password[this->row].at(i))  // Grenzwert wird nicht überprüft, deshalb existiert ein Out of range
+        if(this->stringNumbersBackUp.at(i) == this->Password[this->row].at(i))  
             counter2++;
 
     }
@@ -141,7 +141,7 @@ void MainWindow::on_pushButton_13_clicked()
         for(int i = 0; i<n1; i++)
         {
 
-            if(this->stringNumbersBackUp.at(i) == this->dynamicPassword[this->row-4].at(i))  // Grenzwert wird nicht überprüft, deshalb existiert ein Out of range
+            if(this->stringNumbersBackUp.at(i) == this->dynamicPassword[this->row-4].at(i))  
                 counter2++;
 
         }
@@ -910,6 +910,7 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
 
 
