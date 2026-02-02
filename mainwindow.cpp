@@ -66,7 +66,9 @@ void MainWindow::on_pushButton_13_clicked()
      */
     if(this->clickedStart)
     {
-
+                                                                        /*
+                                                                         * Auswertung der Zeitdaten
+                                                                         */
     this->backupCounter();
     for(int i = 1; i<=this->secondCounter; i++)
     {
@@ -104,6 +106,9 @@ void MainWindow::on_pushButton_13_clicked()
         }
 
     }
+                                /*
+                                 * Überprüfung der Passwörter
+                                 */
     if(this->row <4)
     { int localCounter = 0;
     this->decryptCode(localCounter,false);
@@ -154,7 +159,10 @@ void MainWindow::on_pushButton_13_clicked()
     return;
 }
 
-
+                                                        /*
+                                                         *
+                                                         *  Erstellung des Zeitstempels
+                                                         */
 
 void MainWindow::saveTime(bool v1)
 {
@@ -191,13 +199,13 @@ void MainWindow::on_pushButton_10_clicked()
    // ui->label->setText(QString::number(this->startTime));
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_2_clicked()  // Klicken Taste 2
 {
     this->generateCode(ui->pushButton_2->text().at(0).toLatin1());
 }
 
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_pushButton_3_clicked()  // Klicken Taste 3
 {
 
     this->generateCode(ui->pushButton_3->text().at(0).toLatin1());
@@ -206,7 +214,7 @@ void MainWindow::on_pushButton_3_clicked()
 
 
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_pushButton_4_clicked()    // Klicken Taste 4
 {
     this->generateCode(ui->pushButton_4->text().at(0).toLatin1());
 }
@@ -214,7 +222,7 @@ void MainWindow::on_pushButton_4_clicked()
 
 
 
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::on_pushButton_5_clicked()    // Klicken Taste 5
 {
     this->generateCode(ui->pushButton_5->text().at(0).toLatin1());
 }
@@ -222,7 +230,7 @@ void MainWindow::on_pushButton_5_clicked()
 
 
 
-void MainWindow::on_pushButton_6_clicked()
+void MainWindow::on_pushButton_6_clicked() // Klicken Taste 6
 {
     this->generateCode(ui->pushButton_6->text().at(0).toLatin1());
 }
@@ -230,20 +238,20 @@ void MainWindow::on_pushButton_6_clicked()
 
 
 
-void MainWindow::on_pushButton_7_clicked()
+void MainWindow::on_pushButton_7_clicked() // Klicken Taste 7
 {
     this->generateCode(ui->pushButton_7->text().at(0).toLatin1());
 }
 
 
 
-void MainWindow::on_pushButton_8_clicked()
+void MainWindow::on_pushButton_8_clicked() // Klicken Taste 8
 {
     this->generateCode(ui->pushButton_8->text().at(0).toLatin1());
 }
 
 
-void MainWindow::on_pushButton_9_clicked()
+void MainWindow::on_pushButton_9_clicked() // Klicken Taste 9
 {
     this->generateCode(ui->pushButton_9->text().at(0).toLatin1());
 }
@@ -251,7 +259,7 @@ void MainWindow::on_pushButton_15_clicked()
 {
     this->generateCode('0');
 }
-void MainWindow::setCode(int c)
+void MainWindow::setCode(int c)            // Erzeugung des Unicodes
 {
 
     if(c == this->counter)
@@ -269,7 +277,7 @@ void MainWindow::setCode(int c)
     return;
     }
 
-void MainWindow::decryptCode(int c, bool visible)
+void MainWindow::decryptCode(int c, bool visible)    // Ausgabe der eigentlichen Nutzdaten
 {
 
     if(c == this->counter)
@@ -291,25 +299,25 @@ void MainWindow::decryptCode(int c, bool visible)
     }
 }
 
-void MainWindow::on_radioButton_clicked()
+void MainWindow::on_radioButton_clicked()        //Klicken des Radiobuttons
 {
     int localCounter = 0;
     this->decryptCode(localCounter,true);
 }
 
-void MainWindow::resetCounter()
+void MainWindow::resetCounter()            // Zurücksetzen des Systems
 {
     this->counter = 0;
      ui->label_6->setText(QString::fromStdString(this->password));
 }
 
-void MainWindow::on_listWidget_itemPressed(QListWidgetItem *item)
+void MainWindow::on_listWidget_itemPressed(QListWidgetItem *item)        // Hinzufügen eines Elements in der  Tabelle
 {
     this->row = item->listWidget()->currentRow();
     ui->label_13->setText(QString::fromStdString(to_string(this->row)));
 }
 
-
+                                                // Umschaltung zwischen Kleinbuchstaben und Großbuchstaben.
 void MainWindow::on_pushButton_11_clicked()
 {
 
@@ -597,7 +605,7 @@ void MainWindow::on_pushButton_11_clicked()
 
 
                                                     /**************
-                                                     * TASTE 1
+                                                     * TASTE 1 - Umschaltung des Tastenfelds
                                                      */
 
 
@@ -626,6 +634,9 @@ void MainWindow::ConvertButton1()
         return;
     }
 }
+                                    /*
+                                    * TASTE 2 - Umschaltung des Tastenfelds
+                                    */
 
 void MainWindow::ConvertButton2()
 {
@@ -651,6 +662,9 @@ void MainWindow::ConvertButton2()
     }
 
 }
+                                     /*
+                                      * TASTE 3 - Umschaltung des Tastenfelds
+                                      */
 
 void MainWindow::ConvertButton3()
 {
@@ -675,7 +689,9 @@ void MainWindow::ConvertButton3()
         return;
     }
 }
-
+                                     /*
+                                      * TASTE 4 - Umschaltung des Tastenfelds
+                                      */
 void MainWindow::ConvertButton4()
 {
     if( "4" == ui->pushButton_4->text())
@@ -699,7 +715,9 @@ void MainWindow::ConvertButton4()
         return;
     }
 }
-
+                                     /*
+                                      * TASTE 5 - Umschaltung des Tastenfelds
+                                      */
 void MainWindow::ConvertButton5()
 {
     if( "5" == ui->pushButton_5->text())
@@ -722,7 +740,9 @@ void MainWindow::ConvertButton5()
         ui->pushButton_5->setText("5");
         return;
     }
-}
+}                                    /*
+                                      * TASTE 6 - Umschaltung des Tastenfelds
+                                      */
 void MainWindow::ConvertButton6()
 {
     if( "6" == ui->pushButton_6->text())
@@ -746,6 +766,9 @@ void MainWindow::ConvertButton6()
         return;
     }
 }
+                                     /*
+                                      * TASTE 7 - Umschaltung des Tastenfelds
+                                      */
 void MainWindow::ConvertButton7()
 {
 
@@ -772,6 +795,9 @@ void MainWindow::ConvertButton7()
         }
 
 }
+                             /*
+                              * TASTE 8 - Umschaltung des Tastenfelds
+                              */
 void MainWindow::ConvertButton8()
 {
 
@@ -797,6 +823,9 @@ void MainWindow::ConvertButton8()
         }
 
 }
+                                     /*
+                                      * TASTE 9 - Umschaltung des Tastenfelds
+                                      */
 void MainWindow::ConvertButton9()
 {
 
@@ -823,6 +852,7 @@ void MainWindow::ConvertButton9()
 
 
 }
+                            // Ausführung der Umschaltung
 void MainWindow::on_pushButton_16_clicked()
 {
 
@@ -838,19 +868,26 @@ void MainWindow::on_pushButton_16_clicked()
 
 }
 
-
+    /*
+    * Generierung eines dynamischen Passworts
+    */
 void MainWindow::on_pushButton_17_clicked()
 {
     this->clickedStart = true;
     if(this->generateStatic == true)
-    {
+    {  
+        /*
+         * Statische Passwörter
+         */
         ui->listWidget->addItem(QString::fromStdString(this->Password[0]));
         ui->listWidget->addItem(QString::fromStdString(this->Password[1]));
         ui->listWidget->addItem(QString::fromStdString(this->Password[2]));
         ui->listWidget->addItem(QString::fromStdString(this->Password[3]));
         this->generateStatic = false;
     }
-
+    /*
+     * Erzeugung von Pseudozufallszahlen, dieser als Message-parameter der Md5-Funktion übergeben wird.
+     */
     QCryptographicHash * MD5 = new QCryptographicHash(QCryptographicHash::Md5);
     QRandomGenerator64 * PRNG = new QRandomGenerator64(this->seed);
     QByteArray * data = new QByteArray();
@@ -861,7 +898,7 @@ void MainWindow::on_pushButton_17_clicked()
     QString tmp3 = QString(QCryptographicHash::hash((tmp.toStdString()),QCryptographicHash::Md5).toHex());
     string passwords = tmp3.toStdString();
     string wordLen;
-    for(int i = 0; i<2; i++)
+    for(int i = 0; i<2; i++)    // Erstellung eines Passworts mit der Länge 9
     {
         for(int j = 9 * i; j< 9 * i + 9; j++)
         {
@@ -873,4 +910,5 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
