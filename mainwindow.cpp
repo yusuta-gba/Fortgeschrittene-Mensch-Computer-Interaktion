@@ -16,12 +16,12 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_clicked()    // Klicken der Taste 1
 {
     this->generateCode(ui->pushButton->text().at(0).toLatin1());
 
 }
-void MainWindow::backupCounter()
+void MainWindow::backupCounter()        // Counter klonen
 {
     this->secondCounter = this->counter;
 }
@@ -36,7 +36,7 @@ void MainWindow::generateCode(char a)
 
 
 }
-void MainWindow::reset()
+void MainWindow::reset() // Zurücksetzung des Gesamtsystems bzw. der GUI-Objekte
 {
     this->resetCounter();
     this->entryTime.clear();
@@ -910,5 +910,6 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
 
