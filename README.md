@@ -1,5 +1,5 @@
-<object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Algo.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Algo.pdf">
-        <p> Initialization of Salsa20 <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Algo.pdf">Converting Integers to 32-Bit</a>.</p>
+<object data="https://github.com/yusuta-gba/Fortgeschrittene-Mensch-Computer-Interaktion/blob/main/Doku_FMCI_Projekt%20(6).pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/yusuta-gba/Fortgeschrittene-Mensch-Computer-Interaktion/blob/main/Doku_FMCI_Projekt%20(6).pdf">
+        <p> Projektbericht <a href="https://github.com/yusuta-gba/Fortgeschrittene-Mensch-Computer-Interaktion/blob/main/Doku_FMCI_Projekt%20(6).pdf"> Implementierung einer Symbian T9-Tastatur </a>.</p>
     </embed>
 </object>
