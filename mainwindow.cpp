@@ -124,7 +124,7 @@ void MainWindow::on_pushButton_13_clicked()
             counter2++;
 
     }
-    if(counter2 == n1 && counter2 == n1)
+    if(counter2 == n1 && counter2 == n2)
         ui->label_6->setText(QString::fromStdString("PASSWORD IS VALID"));
     else
         ui->label_6->setText(QString::fromStdString("PASSWORD IS NOT VALID"));
@@ -145,7 +145,7 @@ void MainWindow::on_pushButton_13_clicked()
                 counter2++;
 
         }
-        if(counter2 == n1 && counter2 == n1)
+        if(counter2 == n1 && counter2 == n2)
             ui->label_6->setText(QString::fromStdString("PASSWORD IS VALID"));
         else
             ui->label_6->setText(QString::fromStdString("PASSWORD IS NOT VALID"));
@@ -910,6 +910,7 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
 
 
