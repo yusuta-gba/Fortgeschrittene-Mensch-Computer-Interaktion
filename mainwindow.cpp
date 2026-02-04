@@ -898,7 +898,7 @@ void MainWindow::on_pushButton_17_clicked()
     QString tmp3 = QString(QCryptographicHash::hash((tmp.toStdString()),QCryptographicHash::Md5).toHex());
     string passwords = tmp3.toStdString();
     string wordLen;
-    for(int i = 0; i<2; i++)    // Erstellung eines Passworts mit der Länge 9
+    for(int i = 0; i<2; i++)    // Erstellung zwei Passwörter mit der Länge 9
     {
         for(int j = 9 * i; j< 9 * i + 9; j++)
         {
@@ -910,6 +910,7 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
 
 
