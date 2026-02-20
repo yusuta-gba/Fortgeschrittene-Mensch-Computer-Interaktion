@@ -311,7 +311,7 @@ void MainWindow::resetCounter()            // Zurücksetzen des Systems
      ui->label_6->setText(QString::fromStdString(this->password));
 }
 
-void MainWindow::on_listWidget_itemPressed(QListWidgetItem *item)        // Hinzufügen eines Elements in der  Tabelle
+void MainWindow::on_listWidget_itemPressed(QListWidgetItem *item)        // Hinzufügen eines Elements in die  Tabelle
 {
     this->row = item->listWidget()->currentRow();
     ui->label_13->setText(QString::fromStdString(to_string(this->row)));
@@ -910,6 +910,7 @@ void MainWindow::on_pushButton_17_clicked()
     }
     this->seed = this->seed +1;
 }
+
 
 
 
